@@ -53,8 +53,14 @@ const eslintConfig = [
             'parent',
             'sibling',
             'index',
+            'type',
           ],
           pathGroups: [
+            {
+              pattern: 'next/**',
+              group: 'external',
+              position: 'before',
+            },
             {
               pattern: '^@core/(.*)$',
               group: 'external',
@@ -76,11 +82,13 @@ const eslintConfig = [
               position: 'before',
             },
           ],
+          pathGroupsExcludedImportTypes: ['builtin'],
           'newlines-between': 'always',
           alphabetize: {
             order: 'asc',
             caseInsensitive: true,
           },
+          warnOnUnassignedImports: true,
         },
       ],
     },

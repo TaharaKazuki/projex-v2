@@ -1,7 +1,10 @@
 'use client';
 
-import type { ThemeProviderProps } from 'next-themes';
+import dynamic from 'next/dynamic';
+
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
+
+import type { ThemeProviderProps } from 'next-themes';
 
 const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
   return (
@@ -17,4 +20,6 @@ const ThemeProvider = ({ children, ...props }: ThemeProviderProps) => {
   );
 };
 
-export default ThemeProvider;
+export default dynamic(() => Promise.resolve(ThemeProvider), {
+  ssr: false,
+});
