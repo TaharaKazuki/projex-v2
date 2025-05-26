@@ -53,7 +53,6 @@ const eslintConfig = [
             'parent',
             'sibling',
             'index',
-            'type',
           ],
           pathGroups: [
             {
