@@ -14,11 +14,11 @@ export const Header = ({ className }: HeaderProps) => {
   return (
     <header
       className={cn(
-        'bg-background/95 supports-[backdrop-filter]:bg-background/60 fixed top-0 z-50 flex w-full justify-center border-b backdrop-blur',
+        'bg-background/95 supports-[backdrop-filter]:bg-background/60 fixed top-0 z-50 w-full border-b backdrop-blur',
         className
       )}
     >
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container mx-auto flex h-16 items-center justify-between">
         <Link
           href="/"
           className="hover:text-primary flex items-center space-x-2 text-xl font-bold transition-colors"
