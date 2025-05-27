@@ -28,7 +28,7 @@ const LoginForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors, isLoading },
   } = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
   });
@@ -74,8 +74,8 @@ const LoginForm = () => {
             )}
           </div>
 
-          <Button className="w-full" type="submit" disabled={isSubmitting}>
-            {isSubmitting ? 'ログイン中...' : 'ログイン'}
+          <Button className="w-full" type="submit" disabled={isLoading}>
+            {isLoading ? 'ログイン中...' : 'ログイン'}
           </Button>
         </CardContent>
         <CardFooter></CardFooter>
