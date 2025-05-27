@@ -14,7 +14,7 @@ export const Header = ({ className }: HeaderProps) => {
   return (
     <header
       className={cn(
-        `bg-background/95 supports-[backdrop-filter]:bg-background/60 top-0 flex w-full border-b backdrop-blur`,
+        'bg-background/95 supports-[backdrop-filter]:bg-background/60 fixed top-0 z-50 flex w-full justify-center border-b backdrop-blur',
         className
       )}
     >

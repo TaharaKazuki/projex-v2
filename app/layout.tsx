@@ -28,14 +28,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
           geistSans.variable,
           geistMono.variable,
           'bg-background min-h-screen font-sans antialiased'
         )}
-        suppressHydrationWarning
       >
         <AppProvider>{children}</AppProvider>
       </body>
