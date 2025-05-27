@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 import { ThemeToggle } from './ThemeToggle';
+import { UserMenu } from './UserMenu';
 
 type HeaderProps = {
   className?: string;
@@ -25,8 +26,11 @@ export const Header = ({ className }: HeaderProps) => {
         >
           Projex
         </Link>
-        <div className="border-l pl-4 dark:border-gray-800">
-          <ThemeToggle />
+        <div className="flex items-center gap-4">
+          <UserMenu user="John Doe" />
+          <div className="border-l pl-4 dark:border-gray-800">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </header>
