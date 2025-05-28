@@ -75,7 +75,7 @@ const LoginForm = () => {
           </div>
 
           <Button className="w-full" type="submit" disabled={isLoading}>
-            {isLoading ? 'ログイン中...' : 'ログイン'}
+            {isLoading ? 'Loading' : 'Login'}
           </Button>
         </CardContent>
         <CardFooter></CardFooter>
